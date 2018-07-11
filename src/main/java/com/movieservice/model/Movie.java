@@ -1,15 +1,17 @@
 package com.movieservice.model;
 
+import java.util.List;
+
 public class Movie {
 	
 	private String id;
 	private String title;
 	private String album;
 	private String year;
-	private String genre;
+	private List<String> genre;
 	private String rating;
 	private String productionHouse;
-	private String cast;
+	private List<String> cast;
 	
 	public String getId() {
 		return id;
@@ -35,10 +37,10 @@ public class Movie {
 	public void setYear(String year) {
 		this.year = year;
 	}
-	public String getGenre() {
+	public List<String> getGenre() {
 		return genre;
 	}
-	public void setGenre(String genre) {
+	public void setGenre(List<String> genre) {
 		this.genre = genre;
 	}
 	public String getRating() {
@@ -53,10 +55,10 @@ public class Movie {
 	public void setProductionHouse(String productionHouse) {
 		this.productionHouse = productionHouse;
 	}
-	public String getCast() {
+	public List<String> getCast() {
 		return cast;
 	}
-	public void setCast(String cast) {
+	public void setCast(List<String> cast) {
 		this.cast = cast;
 	}
 }

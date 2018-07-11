@@ -1,3 +1,4 @@
+
 package com.movieservice.dao.impl;
 
 import java.util.ArrayList;
@@ -360,8 +361,8 @@ public class MovieDaoImpl implements MovieDao {
 		movie.setId(doc.getString("id"));
 		movie.setTitle(doc.getString("title"));
 		movie.setAlbum(doc.getString("album"));
-		movie.setCast(doc.getString("cast"));
-		movie.setGenre(doc.getString("genre"));
+		movie.setCast((List<String>) doc.get("cast"));
+		movie.setGenre((List<String>)doc.get("genre"));
 		movie.setProductionHouse(doc.getString("productionHouse"));
 		movie.setRating(doc.getString("rating"));
 		movie.setYear(doc.getString("year"));
